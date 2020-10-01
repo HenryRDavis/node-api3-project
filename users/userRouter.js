@@ -6,7 +6,9 @@ const router = express.Router();
 router.post('/', (req, res) => {
   // do your magic!
   Users.insert()
-  .then()
+  .then(posts => {
+    res.status(201).json(posts)
+  })
   .catch( err => {
     res.status(500).json({message: 'Error adding post'})
   })
