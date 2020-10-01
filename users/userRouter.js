@@ -10,7 +10,7 @@ router.post('/', (req, res) => {
     res.status(201).json(posts)
   })
   .catch( err => {
-    res.status(500).json({message: 'Error adding posts'})
+    res.status(500).json({message: 'Error adding post'})
   })
 });
 
